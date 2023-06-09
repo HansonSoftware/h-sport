@@ -1,81 +1,1379 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout title="H+ Sport">
+  <header id="home" class="header">
+    <nav class="nav" role="navigation">
+      <div class="container nav-elements">
+        <div class="branding">
+          <a href="#home"
+            ><img
+              src="../src/images/hpluslogo.svg"
+              alt="Logo - H Plus Sports"
+            /></a
+          >
+        </div><!-- branding -->
+        <ul class="navbar">
+          <li><a href="#home">home</a></li>
+          <li><a href="#history">history</a></li>
+          <li><a href="#products">products</a></li>
+          <li><a href="#guarantee">guarantee</a></li>
+          <li><a href="#people">people</a></li>
+        </ul><!-- navbar -->
+        <div class="forecast">
+          <div class="prefs">
+            <form>
+              <h3>Activity Forecast</h3>
+              <div>
+                <label for="location" class="hidden">Location</label>
+                <input id="location" placeholder="Enter location" />
+              </div>
+              <div class="button">
+                <input
+                  type="submit"
+                  value="Get Forecast"
+                  class="forecast-button"
+                />
+              </div>
+              <div class="conditions"></div>
+            </form>
+          </div><!-- prefs -->
+          <div class="results">
+            <h3>Activities</h3>
+            <div class="options">
+              <div id="solo">Solo</div>
+              <div id="team">Team</div>
+              <div id="all" class="selected">All</div>
+            </div><!-- options -->
+            <div class="activities"></div>
+          </div><!-- results -->
+        </div><!-- forecast -->
+      </div><!-- container nav-elements -->
+    </nav>
+    <div class="container tagline">
+      <h1 class="headline">Our Mission</h1>
+      <p>
+        We support and encourage <em>active and healthy</em> lifestyles, by offering
+        <em>ethically sourced</em> and <em>eco-friendly</em> nutritional products
+        for the <em>performance-driven</em> athlete.
+      </p>
+    </div><!-- container tagline -->
+  </header><!-- #home -->
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+  <section id="history" class="section">
+    <div class="container">
+      <div class="text-content">
+        <h2 class="headline">Company History</h2>
+        <p>
+          In 2006, H+ Sport founder <a href="#employees-henrytwill"
+            >Henry Twill</a
+          > set out to create supplements and nutritional products made from the
+          <em>purest ingredients</em> and backed by scientific and <em
+            >performance data</em
+          > – to provide a strong basis of <em>trust and accountability</em>.
+        </p>
+        <p>
+          His quest began while training for his <em>first 5K marathon</em>,
+          after recovering from a <em>lengthy injury</em> that left him with residual
+          aches, pains, and decreased athletic performance. He yearned for <em
+            >simple and natural ingredients</em
+          >, in their purest form, instead of labels with <em
+            >lengthy chemical names</em
+          > and disclaimers. When no products lived up to his strict requirements,
+          Henry set his sights on <em>creating products</em> that catered to his
+          own vision.
+        </p>
+        <p>
+          Today that vision has become H+ Sport…offering a variety of <a
+            href="#products"
+            >supplements, energy bars and rehydration solutions</a
+          >. At the foundation of H+ Sports are products backed by scientific
+          and performance data.
+        </p>
+      </div>
+    </div><!-- container text -->
+  </section><!-- #history -->
+
+  <section id="products" class="section">
+    <header class="imageheader"></header>
+    <div class="container">
+      <h2 class="headline">Products</h2>
+      <p>
+        H+ Sport is <em>dedicated to creating</em> eco-friendly, high-quality, nutrient-rich,
+        nutritional products that <em>enhance active lifestyles</em>. We <a
+          href="#guarantee">guarantee</a
+        > it. Take a look at some of our products.
+      </p>
+    </div><!-- container -->
+    <ul class="product-list">
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/vitamin-a.jpg"
+          alt="Vitamin A - Product Photo"
+        />
+        <h2 class="product-name">Vitamin A</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/vitamin-bcomplex.jpg"
+          alt="B Complex - Product Photo"
+        />
+        <h2 class="product-name">Vitamin-B Complex</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/mineralwater-blueberry.jpg"
+          alt="Blueberry Mineral Water - Product Photo"
+        />
+        <h2 class="product-name">Blueberry Mineral Water</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/vitamin-c.jpg"
+          alt="Vitamin C - Product Photo"
+        />
+        <h2 class="product-name">Vitamin C</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/proteinbar-chocolate.jpg"
+          alt="Protein Bar Chocolate - Product Photo"
+        />
+        <h2 class="product-name">Chocolate Protein Bar</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/vitamin-calcium.jpg"
+          alt="Vitamin Calcium - Product Photo"
+        />
+        <h2 class="product-name">Calcium Vitamin</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/vitamin-d.jpg"
+          alt="Vitamin D - Product Photo"
+        />
+        <h2 class="product-name">Vitamin D</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/vitamin-flaxseed-oil.jpg"
+          alt="Flaxseed Oil - Product Photo"
+        />
+        <h2 class="product-name">Flaxseed Oil Vitamin</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/vitamin-iron.jpg"
+          alt="Vitamin Iron - Product Photo"
+        />
+        <h2 class="product-name">Iron Vitamin</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/mineralwater-lemonlime.jpg"
+          alt="Mineral Water Lemon Lime - Product Photo"
+        />
+        <h2 class="product-name">Lemon Lime Mineral Water</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/vitamin-magnesium.jpg"
+          alt="Vitamin Magnesium - Product Photo"
+        />
+        <h2 class="product-name">Magnesium Vitamin</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/vitamin-multi.jpg"
+          alt="Vitamin Multivitamin - Product Photo"
+        />
+        <h2 class="product-name">Multi-vitamin</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/proteinbar-peanutbutter.jpg"
+          alt="Vitamin Protein Bar Peanut Butter - Product Photo"
+        />
+        <h2 class="product-name">Peanut Butter Protein Bar</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/mineralwater-strawberry.jpg"
+          alt="Mineral Water Strawberry - Product Photo"
+        />
+        <h2 class="product-name">Strawberry Mineral Water</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/proteinbar-lemon.jpg"
+          alt="Protein Bar Lemon - Product Photo"
+        />
+        <h2 class="product-name">Lemon Protein Bar</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/mineralwater-orange.jpg"
+          alt="Mineral Water Orange - Product Photo"
+        />
+        <h2 class="product-name">Orange Mineral Water</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/mineralwater-peach.jpg"
+          alt="Mineral Water Peach - Product Photo"
+        />
+        <h2 class="product-name">Peach Mineral Water</h2>
+      </li>
+      <li class="product-item">
+        <img
+          class="product-image"
+          src="../src/images/products/mineralwater-raspberry.jpg"
+          alt="Mineral Water Raspberry - Product Photo"
+        />
+        <h2 class="product-name">Raspberry Mineral Water</h2>
+      </li>
+    </ul><!-- product-list -->
+  </section><!-- #products -->
+
+  <section id="guarantee" class="section">
+    <header class="imageheader"></header>
+    <div class="container">
+      <h2 class="headline">Our Guarantee &amp; Ideals</h2>
+      <p>
+        We’re committed to creating products that <em>defy convention</em>, and
+        inspire our customers with pride and trust. In fact, we guarantee <a
+          href="#products">every product</a
+        > we sell. If you’re not 100 percent happy with your purchase, you can return
+        it during the first 60 days, <em>no questions asked</em>.
+      </p>
+      <p>
+        Philanthropy is extremely important to us. In fact, <em
+          >each employee volunteers</em
+        > for organization of his or her choice, on the clock, for two hours each
+        week. We know that doing good, breeds more doing good, and we’re happy to
+        <em>promote a cycle</em> of volunteerism that just keeps on giving.
+      </p>
+    </div>
+  </section><!-- guarantee -->
+
+  <section id="people" class="section">
+    <header class="imageheader"></header>
+    <div class="container">
+      <h2 class="headline">People</h2>
+      <div class="people-cards">
+        <div class="person-card">
+          <img
+            src="../src/images/employees/HenryTwill.jpg"
+            alt="HenryTwill Photo"
+          />
+          <div class="card-info">
+            <h3 class="card-name">Henry Twill, Jr</h3>
+            <h4 class="card-title">CEO</h4>
+          </div>
+          <p class="card-text">
+            Henry Twill Jr. is the <em>founder</em> and CEO of H+ Sports. Previously
+            he was an <em>athletic trainer</em> working with several top athletes,
+            making sure that they had the direction and proper coaching to keep them
+            at the <em>top of their game</em>. Henry’s passion for finding
+            natural alternatives led him to developing H+ Sport Multivitamins.
+            The supplements <em>became a success</em> with his clients and led to
+            the creation of H+ Sports.
+          </p>
+        </div><!-- person-card -->
+
+        <div class="person-card">
+          <img
+            src="../src/images/employees/JessicaNewton.jpg"
+            alt="JessicaNewton Photo"
+          />
+          <div class="card-info">
+            <h3 class="card-name">Jessica Newton-Smith, MBA</h3>
+            <h4 class="card-title">CFO</h4>
+          </div>
+          <p class="card-text">
+            Jessica Newton-Smith joined us in 2012 and brings more than <em
+              >10 years</em
+            > of financial management experience to H+ Sports, spanning a variety
+            of companies and industries ranging from <em>
+              Fortune 500 agencies</em
+            > to start-ups. She has extensive experience working in <em
+              >emerging markets</em
+            > and in the consumer and retail sectors.
+          </p>
+        </div><!-- person-card -->
+
+        <div class="person-card">
+          <img src="../src/images/employees/PhiTang.jpg" alt="PhiTang Photo" />
+          <div class="card-info">
+            <h3 class="card-name">Phi Tang, MBA</h3>
+            <h4 class="card-title">Director of Product Development</h4>
+          </div>
+          <p class="card-text">
+            Phi Tang joined H+ Sports in <em>2007</em> as Manager of Marketing Research.
+            He was promoted to Director of Product Development in 2011. He has made
+            <em>major contributions</em> to the discovery, development, and implementation
+            of the H+ Sport product lines. Before joining the company he worked as
+            a <em>scientific expert</em> and brings vast knowledge of ingredients
+            and <em>new technologies</em>.
+          </p>
+        </div><!-- person-card -->
+
+        <div class="person-card">
+          <img
+            src="../src/images/employees/MariaSontas.jpg"
+            alt="MariaSontas Photo"
+          />
+          <div class="card-info">
+            <h3 class="card-name">Maria Sontas</h3>
+            <h4 class="card-title">Director of Marketing</h4>
+          </div>
+          <p class="card-text">
+            Maria Sontas has been with H+ Sport since 2010. She oversees the
+            company’s <em>marketing strategy</em> – ensuring advertising campaigns,
+            social media initiatives, and events are planned to <em
+              >position the company</em
+            > strongly in a competitive marketplace. Maria is a <em
+              >competing triathlete</em
+            > and her passion for our products shows in her unique ability to drive
+            awareness and <em>increase our presence</em> around the world.
+          </p>
+        </div><!-- person-card -->
+
+        <div class="person-card">
+          <img
+            src="../src/images/employees/AngelaHaston.jpg"
+            alt="AngelaHaston Photo"
+          />
+          <div class="card-info">
+            <h3 class="card-name">Angela Hashton</h3>
+            <h4 class="card-title">Director of Sales</h4>
+          </div>
+          <p class="card-text">
+            Angela Hashton joined the company in 2009, to <em
+              >initiate new relationships</em
+            > for our growing line of H+ Sports active apparel. After being with
+            the company for a year, she was promoted to Director of Sales. Angela
+            is the drive behind the H+ Sport <em>ACTIVE product line</em> and has
+            an uncanny ability to formulate strategies that have helped build our
+            unified sales force. <em>Educating people</em> about health and nutrition
+            is something that Angela holds dear.
+          </p>
+        </div><!-- person-card -->
+
+        <div class="person-card">
+          <img
+            src="../src/images/employees/MichaelLewiston.jpg"
+            alt="MichaelLewiston Photo"
+          />
+          <div class="card-info">
+            <h3 class="card-name">Michael Lewiston</h3>
+            <h4 class="card-title">MFA, Creative Director</h4>
+          </div>
+          <p class="card-text">
+            Michael Lewiston is a multi-faceted <em>creative person</em> who began
+            his career as a designer for a small business firm, while also working
+            as an independent <em>painter and sculptor</em>. In 2007, Henry
+            Twill was impressed by Michael’s creative work in a national ad
+            campaign for a high profile sports apparel company. Henry approached
+            Michael, and asked him to <em>manage creative direction</em> for the
+            H+ Sport ACTIVE apparel line.
+          </p>
+        </div><!-- person-card -->
+      </div><!-- container -->
+    </div><!-- people -->
+
+    <footer class="footer">
+      <header class="imageheader"></header>
+      <div class="container">
+        <nav class="nav" role="navigation">
+          <div class="container nav-elements">
+            <div class="branding">
+              <a href="#home"
+                ><img
+                  src="../src/images/hpluslogo.svg"
+                  alt="Logo - H Plus Sports"
+                /></a
+              >
+              <p class="address">
+                100 Main Street<br />
+                Seattle, WA 98144
+              </p>
+            </div>
+            <ul class="navbar">
+              <li><a href="#home">home</a></li>
+              <li><a href="#history">history</a></li>
+              <li><a href="#products">products</a></li>
+              <li><a href="#guarantee">guarantee</a></li>
+              <li><a href="#people">people</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p class="legal">
+          H+ Sport is a fictitious brand created by lynda.com solely for the
+          purpose of training. All products and people associated with H+ Sport
+          are also fictitious. Any resemblance to real brands, products, or
+          people is purely coincidental. Information provided about the product
+          is also fictitious and should not be construed to be representative of
+          actual products on the market in a similar product category.
+        </p>
+      </div><!-- container -->
+    </footer><!-- footer -->
+  </section>
+
+  <style>
+    html {
+      font-size: 62.5%;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    *,
+    :after,
+    :before {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      font-size: 1.8rem;
+      line-height: 160%;
+      font-weight: 300;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      padding: 0;
+      color: #bfc406;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      font-weight: 700;
+      color: #d14348;
+    }
+
+    a:focus,
+    a:hover {
+      text-decoration: none;
+    }
+
+    em {
+      font-weight: 700;
+      font-size: 140%;
+      color: #f3d350;
+      font-style: normal;
+    }
+
+    .header {
+      background: -webkit-linear-gradient(
+          top,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(../images/backgrounds/running.jpg);
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(../images/backgrounds/running.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .header .tagline {
+      display: none;
+    }
+
+    @media screen and (min-width: 600px) {
+      .header {
+        background: -webkit-linear-gradient(
+            top,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(../images/backgrounds/running.jpg);
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(../images/backgrounds/running.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        max-height: 800px;
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      .header .tagline {
+        display: block;
+        color: #fff;
+        max-width: 40em;
+        line-height: 140%;
+        font-size: 2.5rem;
+      }
+      .header .tagline h1 {
+        display: none;
+      }
+      .header .tagline em {
+        font-size: 140%;
+        color: #f3d350;
+        font-style: normal;
+      }
+    }
+
+    .nav {
+      margin-top: 1.75rem;
+      /* navelements */
+    }
+
+    .nav .nav-elements .branding {
+      max-width: 180px;
+      margin: 0 auto;
+    }
+
+    .nav .nav-elements .navbar {
+      margin: 0;
+      padding: 0;
+      line-height: 120%;
+      list-style-type: none;
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    .nav .nav-elements .navbar a {
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      padding: 0 1rem;
+      -webkit-transition: 1s ease-out;
+      transition: 1s ease-out;
+    }
+
+    .nav .nav-elements .navbar a:after {
+      content: "";
+      display: block;
+      height: 5px;
+      width: 0;
+      margin: 0 0.5rem;
+      -webkit-transition: width 0.3s ease-out, background-color 0.3s ease-out;
+      transition: width 0.3s ease-out, background-color 0.3s ease-out;
+    }
+
+    .nav .nav-elements .navbar a:hover {
+      color: #f3d350;
+    }
+
+    .nav .nav-elements .navbar a:hover:after {
+      width: 100%;
+      background: #f3d350;
+    }
+
+    .nav .nav-elements .forecast {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      height: 350px;
+      min-width: 250px;
+    }
+
+    .nav .nav-elements .forecast p {
+      text-align: center;
+      margin: 0.4em;
+    }
+
+    .nav .nav-elements .forecast img {
+      display: inline-block;
+      width: 1.8em;
+      height: 1.8em;
+      vertical-align: bottom;
+    }
+
+    .nav .nav-elements .forecast .prefs,
+    .nav .nav-elements .forecast .results {
+      text-align: left;
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 100%;
+    }
+
+    .nav .nav-elements .forecast .prefs h3,
+    .nav .nav-elements .forecast .results h3 {
+      background-color: black;
+      padding: 0.2em;
+      text-align: center;
+    }
+
+    .nav .nav-elements .forecast .prefs {
+      border: 1px solid white;
+      text-align: center;
+    }
+
+    .nav .nav-elements .forecast .prefs .hidden {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .nav .nav-elements .forecast .prefs form div {
+      display: inline-block;
+    }
+
+    .nav .nav-elements .forecast .prefs .conditions .city {
+      font-weight: bold;
+    }
+
+    .nav .nav-elements .forecast .results {
+      display: none;
+      border: 1px solid white;
+      border-top: none;
+    }
+
+    .nav .nav-elements .forecast .results .options {
+      text-align: center;
+      border-bottom: 1px solid white;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .nav .nav-elements .forecast .results .options div {
+      display: inline-block;
+      width: 33.33%;
+      padding: 0.25em 1em;
+      margin: 0;
+      border: 0;
+      background-color: rgba(255, 255, 255, 0.5);
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    .nav .nav-elements .forecast .results .options #team {
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+    }
+
+    .nav .nav-elements .forecast .results .options div:hover {
+      background-color: white;
+    }
+
+    .nav .nav-elements .forecast .results .options .selected {
+      background-color: #bfc406;
+    }
+
+    .nav .nav-elements .forecast .results .options .selected:hover {
+      background-color: #bfc406;
+    }
+
+    .nav .nav-elements .forecast .results .activities {
+      max-height: 125px;
+      overflow: scroll;
+    }
+
+    .nav .nav-elements .forecast .results .activities ul {
+      margin: 0.25em 0 0;
+    }
+
+    @media screen and (min-width: 600px) {
+      .nav .nav-elements {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      .nav .nav-elements .branding {
+        width: 30%;
+        margin: 0;
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      .nav .nav-elements .forecast {
+        margin-left: 1em;
+        width: 250px;
+      }
+    }
+
+    @media screen and (min-width: 1050px) {
+      .nav .nav-elements .navbar {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+      }
+    }
+
+    /* nav */
+
+    .footer {
+      background-color: #312a10;
+      color: #fff;
+      padding: 0 0 5em;
+      line-height: 100%;
+      text-align: center;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      background: -webkit-linear-gradient(top, transparent, #312a10),
+        url(../images/backgrounds/discthrower.jpg);
+      background: linear-gradient(180deg, transparent, #312a10),
+        url(../images/backgrounds/discthrower.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      height: 100vh;
+      max-height: 800px;
+    }
+
+    .footer .nav {
+      margin-top: 0;
+    }
+
+    .footer .legal {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 110%;
+      margin-top: 3rem;
+    }
+
+    .section {
+      min-height: 40vh;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      line-height: 160%;
+    }
+
+    .section .headline {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 4rem;
+      margin-top: 3rem;
+      line-height: 110%;
+    }
+
+    .section a,
+    .section em {
+      font-size: 140%;
+      vertical-align: -6%;
+    }
+
+    @media screen and (min-width: 600px) {
+      .section {
+        font-size: 2rem;
+      }
+    }
+
+    #history {
+      background-color: #f3d350;
+    }
+
+    #history .headline {
+      color: #d14348;
+    }
+
+    #history em {
+      color: #e69f2a;
+    }
+
+    @media screen and (min-width: 1200px) {
+      #history {
+        background-image: url(../images/employees/HenryTwill_outline.png);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: 30% auto;
+        min-height: 100vh;
+      }
+      #history .text-content {
+        width: 70%;
+      }
+    }
+
+    #products {
+      /*.product-list*/
+    }
+
+    #products .imageheader {
+      background: -webkit-linear-gradient(top, transparent, transparent),
+        url(../images/backgrounds/swimming.jpg);
+      background: linear-gradient(180deg, transparent, transparent),
+        url(../images/backgrounds/swimming.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      height: 100vh;
+      max-height: auto;
+    }
+
+    #products .product-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      /*.product-item*/
+    }
+
+    #products .product-list .product-item {
+      position: relative;
+      color: #fff;
+      overflow: hidden;
+      width: 50%;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.8;
+      /*.product-name*/
+    }
+
+    #products .product-list .product-item .product-name {
+      background: #d14348;
+      color: #f3d350;
+      font-weight: 700;
+      font-size: 80%;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: none;
+    }
+
+    #products .product-list .product-item:focus .product-name,
+    #products .product-list .product-item:hover .product-name {
+      display: block;
+    }
+
+    #products .product-list .product-item:focus,
+    #products .product-list .product-item:hover {
+      opacity: 1;
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3);
+      z-index: 1;
+    }
+
+    #products .product-list .product-item:focus .product-name,
+    #products .product-list .product-item:hover .product-name {
+      display: block;
+      -webkit-animation: a 1s;
+      animation: a 1s;
+    }
+
+    @-webkit-keyframes a {
+      0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+      }
+      to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+    }
+
+    @keyframes a {
+      0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+      }
+      to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      #products .product-list .product-item {
+        width: 33.33333%;
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      #products .product-list .product-item {
+        width: 25%;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      #products .product-list .product-item {
+        width: 16.66667%;
+      }
+    }
+
+    /* products*/
+
+    #guarantee {
+      color: #fff;
+      font-size: 2rem;
+      background-color: #8f9305;
+    }
+
+    #guarantee .imageheader {
+      background: -webkit-linear-gradient(top, transparent, #8f9305),
+        url(../images/backgrounds/cycling.jpg);
+      background: linear-gradient(180deg, transparent, #8f9305),
+        url(../images/backgrounds/cycling.jpg);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: cover;
+      height: 100vh;
+      max-height: 60vh;
+    }
+
+    #guarantee .headline {
+      color: #f5da6a;
+    }
+
+    #guarantee a {
+      color: #d2d651;
+    }
+
+    #people {
+      background-color: #e7c84c;
+      /*.people-cards*/
+    }
+
+    #people .imageheader {
+      background: -webkit-linear-gradient(top, transparent, #e7c84c),
+        url(../images/backgrounds/soccer.jpg);
+      background: linear-gradient(180deg, transparent, #e7c84c),
+        url(../images/backgrounds/soccer.jpg);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      height: 100vh;
+      max-height: 40vh;
+    }
+
+    #people .headline {
+      color: #fff;
+      padding-bottom: 2rem;
+    }
+
+    #people .people-cards {
+      /*.person-card*/
+    }
+
+    #people .people-cards .person-card {
+      background: hsla(0, 0%, 100%, 0.2);
+      box-shadow: 5px 5px 3px rgba(243, 211, 80, 0.5);
+      border-radius: 20px;
+      margin-bottom: 3rem;
+      -webkit-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+      opacity: 0.8;
+      /*.card-text*/
+    }
+
+    #people .people-cards .person-card .card-info {
+      background: rgba(255, 177, 47, 0.9);
+      padding: 3% 7%;
+    }
+
+    #people .people-cards .person-card .card-info .card-name {
+      font-size: 2rem;
+      line-height: 110%;
+      color: #d14348;
+    }
+
+    #people .people-cards .person-card .card-info .card-title {
+      color: hsla(0, 0%, 100%, 0.6);
+      font-size: 1.4rem;
+      line-height: 100%;
+    }
+
+    /*.card-info*/
+
+    #people .people-cards .person-card .card-text {
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 130%;
+      margin: 0;
+      padding: 7%;
+    }
+
+    #people .people-cards .person-card .card-text em {
+      color: #f2a82d;
+      font-size: 2.2rem;
+    }
+
+    #people .people-cards .person-card:hover {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+      opacity: 1;
+    }
+
+    @media screen and (min-width: 600px) {
+      #people .people-cards {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+    }
+
+    @media screen and (min-width: 600px) {
+      #people .people-cards .person-card {
+        width: calc(100% / 2 - 1.5rem);
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      #people .people-cards .person-card {
+        width: calc(100% / 3 - 1.5rem);
+      }
+    }
+
+    /*.people*/
+  </style>
+
+  <script>
+    (function () {
+      const url = "http://api.openweathermap.org/data/2.5/weather?q=";
+      const apiKey = "APIKEY"; // APIKEY from __.
+      const activities = {
+        teamIn: ["basketball", "hockey", "volleyball"],
+        teamOutWarm: [
+          "softball/baseball",
+          "football/soccer",
+          "American football",
+          "rowing",
+          "tennis",
+          "volleyball",
+          "ultimate frisbee",
+          "rugby",
+        ],
+        teamOutCold: ["hockey"],
+        soloIn: ["rock climbing", "swimming", "ice skating"],
+        soloOutWarm: [
+          "rowing",
+          "running",
+          "hiking",
+          "cycling",
+          "rock climbing",
+        ],
+        soloOutCold: [
+          "snowshoeing",
+          "downhill skiing",
+          "cross-country skiing",
+          "ice skating",
+        ],
+      };
+      let state = {};
+      let category = "all";
+
+      // get weather data when user clicks Forecast button, then add temp & conditions to view
+      //	$('.forecast-button').click(function(e) {
+      document.querySelector(".forecast-button").addEventListener(
+        "click",
+        function (e) {
+          e.preventDefault();
+          //		const location = $('#location').val();
+          const location = document.querySelector("#location").value;
+          //		$('#location').val('');
+          document.querySelector("#location").value = "";
+          /*
+			  $.get(url + location + '&appid=' + apiKey).done(function(response) {
+				  updateUISuccess(response);
+			  }).fail(function() {
+				  updateUIFailure();
+			  });
+	  */
+
+          fetch(url + location + "&appid=" + apiKey)
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (response) {
+              updateUISuccess(response);
+            })
+            .catch(function () {
+              updateUIFailure();
+            });
+        },
+        false
+      );
+
+      // update list of sports when user selects a different category (solo/team/all)
+      //$('.options div').on('click', updateActivityList);
+      document.querySelectorAll(".options div").forEach(function (el) {
+        el.addEventListener("click", updateActivityList, false);
+      });
+
+      // handle ajax success
+      function updateUISuccess(response) {
+        const degC = response.main.temp - 273.15;
+        const degCInt = Math.floor(degC);
+        const degF = degC * 1.8 + 32;
+        const degFInt = Math.floor(degF);
+        state = {
+          condition: response.weather[0].main,
+          icon:
+            "http://openweathermap.org/img/w/" +
+            response.weather[0].icon +
+            ".png",
+          degCInt: Math.floor(degCInt),
+          degFInt: Math.floor(degFInt),
+          city: response.name,
+        };
+
+        //		const $into = $('.conditions')[0];
+        const into = document.querySelector(".conditions");
+
+        //		ReactDOM.render(<Forecast {...state} />, $into);
+        //		ReactDOM.render(<Forecast {...state} />, into);
+
+        /*
+			  function Forecast(props) {
+				  return (
+					  <div>
+						  <p className="city">{props.city}</p>
+						  <p>{props.degCInt}&#176; C / {props.degFInt}&#176; F <img src={props.icon} alt={props.condition} /></p>
+					  </div>
+				  )
+			  }
+	  */
+
+        let container = document.createElement("div");
+        let cityPara = document.createElement("p");
+        cityPara.setAttribute("class", "city");
+        cityPara.textContent = state.city;
+        let conditionsPara = document.createElement("p");
+        //		conditionsPara.textContent = state.degCInt + '\u00B0 C / ' + state.degFInt + '\u00B0 F';
+        conditionsPara.textContent = `${state.degCInt}\u00B0 C / ${state.degFInt}\u00B0 F`;
+        let iconImage = document.createElement("img");
+        iconImage.setAttribute("src", state.icon);
+        iconImage.setAttribute("alt", state.condition);
+        conditionsPara.appendChild(iconImage);
+        container.appendChild(cityPara);
+        container.appendChild(conditionsPara);
+        if (document.querySelector(".conditions div")) {
+          into.replaceChild(
+            container,
+            document.querySelector(".conditions div")
+          );
+        } else {
+          into.appendChild(container);
+        }
+
+        updateActivityList();
+      }
+
+      // handle selection of a new category (team/solo/all)
+      function updateActivityList(event) {
+        //		if (event !== undefined && $(this).hasClass('selected')) {
+        if (
+          event !== undefined &&
+          event.target.classList.contains("selected")
+        ) {
+          // if the 'event' parameter is defined, then a tab has been clicked; if not, then this is the
+          //   default case and the view simply needs to be updated
+          // if the clicked tab has the class 'selected', then no need to change location of 'selected' class
+          //   or change the DOM
+          return true;
+          //		} else if (event !== undefined && !$(this).hasClass('selected')) {
+        } else if (
+          event !== undefined &&
+          !event.target.classList.contains("selected")
+        ) {
+          // if the 'event' parameter is defined, then a tab has been clicked
+          // if the clicked tab does not have the class 'selected', then location of 'selected' class must be added
+          //   to the clicked element and removed from its siblings
+          //			category = $(this).attr('id');
+          category = event.target.id;
+
+          //			$('.options div').removeClass('selected');
+
+          document.querySelectorAll(".options div").forEach(function (el) {
+            el.classList.remove("selected");
+          });
+
+          //			$(this).addClass('selected');
+          event.target.classList.add("selected");
+        }
+
+        state.activities = [];
+        if (state.condition === "Rain") {
+          updateState("In");
+        } else if (state.condition === "Snow" || state.degFInt < 50) {
+          updateState("OutCold");
+        } else {
+          updateState("OutWarm");
+        }
+
+        function updateState(type) {
+          if (category === "solo") {
+            state.activities.push(...activities["solo" + type]);
+          } else if (category === "team") {
+            state.activities.push(...activities["team" + type]);
+          } else {
+            state.activities.push(...activities["solo" + type]);
+            state.activities.push(...activities["team" + type]);
+          }
+        }
+
+        //		const $into = $('.activities')[0];
+        const into = document.querySelector(".activities");
+
+        //		ReactDOM.render(<Activities {...state} />, $into);
+        //		ReactDOM.render(<Activities {...state} />, into);
+
+        /*
+			  function Activities(props) {
+				  const activitiesList = props.activities.map(function(activity, index) {
+					  return <li key={index}>{activity}</li>
+				  });
+				  return (
+					  <div>
+						  <ul>{activitiesList}</ul>
+					  </div>
+				  )
+			  }
+	  */
+
+        let activitiesContainer = document.createElement("div");
+        let list = document.createElement("ul");
+        state.activities.forEach(function (activity, index) {
+          let listItem = document.createElement("li");
+          listItem.setAttribute("key", index);
+          listItem.textContent = activity;
+          list.appendChild(listItem);
+        });
+        activitiesContainer.appendChild(list);
+        if (document.querySelector(".activities div")) {
+          into.replaceChild(
+            activitiesContainer,
+            document.querySelector(".activities div")
+          );
+        } else {
+          into.appendChild(activitiesContainer);
+        }
+
+        //		$('.results').slideDown(300);
+        document.querySelector(".results").classList.add("open");
+      }
+
+      // handle ajax failure
+      function updateUIFailure() {
+        //		$(".conditions").text("Weather information unavailable");
+        document.querySelector(".conditions").textContent =
+          "Weather information unavailable";
+      }
+    })();
+  </script>
+</Layout>
